@@ -1,0 +1,318 @@
+{
+	"info": {
+		"_postman_id": "f00cd54b-0c64-425e-9c61-f542e923335b",
+		"name": "Chat-App",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21201941"
+	},
+	"item": [
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "sign-up",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "two",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "12345678",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "two@gmail.com",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{server}}/users/sign-up",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"users",
+								"sign-up"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "saksham@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "12345678",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{server}}/users/login",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"users",
+								"login"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "status",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2M2Y4YmM2ZjBjMjgzYmU2M2ZiODg4MyIsImlhdCI6MTcxNTQ0MDczNCwiZXhwIjoxNzE1NTI3MTM0fQ.fmDyjo-cGcL84cEmCyuV2Di9oAhYAUogcyJiCY8SoDo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{server}}/users/status",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"users",
+								"status"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "search",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2M2Y4YmM2ZjBjMjgzYmU2M2ZiODg4MyIsImlhdCI6MTcxNTQ0MDczNCwiZXhwIjoxNzE1NTI3MTM0fQ.fmDyjo-cGcL84cEmCyuV2Di9oAhYAUogcyJiCY8SoDo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server}}/users?search=tw",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"users"
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": "tw"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Chats",
+			"item": [
+				{
+					"name": "Access/Create Chat",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2M2Y4YmM2ZjBjMjgzYmU2M2ZiODg4MyIsImlhdCI6MTcxNTQ0MDczNCwiZXhwIjoxNzE1NTI3MTM0fQ.fmDyjo-cGcL84cEmCyuV2Di9oAhYAUogcyJiCY8SoDo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "userId",
+									"value": "663f9c72affa5ecc31617720",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{server}}/chat/",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"chat",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Fetch Chats",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2M2Y4YmM2ZjBjMjgzYmU2M2ZiODg4MyIsImlhdCI6MTcxNTQ0MDczNCwiZXhwIjoxNzE1NTI3MTM0fQ.fmDyjo-cGcL84cEmCyuV2Di9oAhYAUogcyJiCY8SoDo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server}}/chat/",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"chat",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Message",
+			"item": [
+				{
+					"name": "send-message",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2M2Y4YmM2ZjBjMjgzYmU2M2ZiODg4MyIsImlhdCI6MTcxNTQ0MDczNCwiZXhwIjoxNzE1NTI3MTM0fQ.fmDyjo-cGcL84cEmCyuV2Di9oAhYAUogcyJiCY8SoDo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "chatId",
+									"value": "663f9c8caffa5ecc31617725",
+									"type": "text"
+								},
+								{
+									"key": "content",
+									"value": "I am Saksham",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{server}}/message",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"message"
+							],
+							"query": [
+								{
+									"key": "chatId",
+									"value": "663f9c8caffa5ecc31617725",
+									"disabled": true
+								},
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "fetch-allmessages",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2M2Y4YmM2ZjBjMjgzYmU2M2ZiODg4MyIsImlhdCI6MTcxNTQ0MDczNCwiZXhwIjoxNzE1NTI3MTM0fQ.fmDyjo-cGcL84cEmCyuV2Di9oAhYAUogcyJiCY8SoDo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server}}/message/663f9c8caffa5ecc31617725",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"message",
+								"663f9c8caffa5ecc31617725"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "server",
+			"value": "http://localhost:8000/api/v1"
+		}
+	]
+}
